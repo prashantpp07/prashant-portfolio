@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant Pandey Portfolio</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 10px 0 0;
+            background-color: #5500ff;
+            color: #f6f6f6;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 200px;
+            text-align: center;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.gifer.com/J4o.gif') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -1;
+        }
+        .container {
+            text-align: left;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1;
+            max-width: 800px;
+            width: 90%;
+        }
+        h1 {
+            color: #fdc600;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #ffffff;
+            max-width: 500px;
+        }
+        h3 {
+            color: #fdc600;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #ffffff;
+            max-width: 500px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 10px 0 0;
+            background-color: #5500ff;
+            color: #f6f6f6;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #ff0000;
+        }
+        #contact-btn {
+            background-color: #5500ff;
+        }
+        #contact-btn:hover {
+            background-color: #a52a2a;
+        }
+        .skills {
+            margin-top: 20px;
+            color: #fdc600;
+        }
+        .section {
+            margin-top: 10px;
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Hi!</h1>
+        <h2>Prashant Pandey here</h2>
+
+        <h3>About me</h3>
+        <p>
+            I am a Computer Science Engineering student with specialization in Graphics & gaming animation. I have worked on some basic platform for graphics like Unity, Figma. Looking for opportunities to grow professionally while contributing to my skills.
+        </p>
+
+        <div class="skills">
+            <strong>SKILLS</strong><br>
+            COURSEWORK: Data Structures<br>
+            LANGUAGE: C#, HTML, Python<br>
+            TOOLS & FRAMEWORK: Figma, Blender, Unity, Fusion 360<br><br>
+        </div>
+
+        <!-- Projects -->
+        <a href="#" class="button" onclick="toggleSection('projects')">My Projects</a>
+        <div id="projects" class="section">
+            <h3>My Projects</h3>
+            <p><a href="#" onclick="showProjectDetails('Project 1: Ice runner Game')">Project 1: Ice runner Game</a></p>
+            <p><a href="#" onclick="showProjectDetails('Project 2: Health chatbot')">Project 2: Health chatbot</a></p>
+        </div><br>
+
+        <!-- Certifications -->
+        <a href="#" class="button" onclick="toggleSection('certifications')">CERTIFICATIONS</a>
+        <div id="certifications" class="section">
+            <h3>CERTIFICATIONS</h3>
+            <p>
+                <a href="https://drive.google.com/file/d/19OMpl6A2q5PscDdlWpMIatGAe1r_uQK2/view?usp=sharing" target="_blank">View All Certifications (PDF)</a>
+            </p>
+        </div><br>
+        <!-- Resume -->
+        <a href="#" class="button" onclick="toggleSection('resume')">Resume</a>
+        <div id="resume" class="section">
+            <h3>Resume</h3>
+            <p>
+              <a href="https://drive.google.com/file/d/1nzStXm1f9FWDvWT76UXyfj45qgu-lEQX/view?usp=sharing" target="_blank">View Resume (PDF)</a>
+            </p>
+        </div><br>
+
+
+        <!-- Contact -->
+        <a href="#" class="button" onclick="toggleSection('contact')">Contact me</a>
+        <div id="contact" class="section">
+            <h3>Contact me</h3>
+            <p>Email: <a href="mailto:pandeyprashantpp08@gmail.com">pandeyprashantpp08@gmail.com</a></p>
+            <p>Phone: <a href="tel:+918756827171">+91 8756827171</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/prashant-pandey-a93907261?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Prashant Pandey</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('active');
+        }
+
+        function showProjectDetails(details) {
+            const projectsSection = document.getElementById('projects');
+            projectsSection.innerHTML = `<h3>Project Details</h3><p>${details}</p>`;
+            projectsSection.classList.add('active');
+        }
+    </script>
+</body>
+</html>
